@@ -1,0 +1,288 @@
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+}
+*:focus{
+    outline: 0px;
+    border: 0px;
+}
+.homeContainer{
+    padding-top: 90px;
+}
+
+/* Design Your Comfort Zone section */
+.Design-section{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.Design-section img{
+    width: 100vw;
+    height: 84vh;
+}
+
+.Design-text{
+    margin-top: 100px;
+}
+.Design-text h1{
+    color: #102a42;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.Design-text p{
+    line-height: 2;
+    color: #4b749b;
+    font-size: 1.25rem;
+    margin-top: 30px;
+}
+
+.Shop-now{/* Shop Now Button */
+    padding: 15px 25px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.Shop-now:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* Featured Products section */
+.Featured-products{
+    width: 100%;
+    background: rgb(231, 235, 235);
+}
+
+.Featured-sub-container{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.Featured-text{
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+.Featured-text h1{
+    color: #102a42;
+    font-size: 35px;
+    padding-bottom: 5px;
+}
+.underLine{
+    width: 100px;
+    height: 4px;
+    margin: auto;
+    background-color:#ab7a5f ;
+}
+
+.Featured-images-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.image-container{
+    width: 32%;
+}
+.image{
+    width: 100%;
+    height: 230px;
+}
+.search{/* the search symbol that appears when the image is hovered */
+    position: absolute;
+    background-color:rgba(0,0,0,0.5);
+    width: 27.2%;
+    height: 130px;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 0; 
+    transition: all 0.3s ease-in;
+}
+.search:hover{
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.search span{
+    padding: 10px;
+    background-color: #ab7a5f;
+    font-size: 30px;
+    color: white;
+    border-radius: 50px;
+}
+
+.image-container p{
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.product-name{
+    text-align: left;
+}
+.product-price{
+    float: right;
+    color: #ab7a5f;
+}
+
+.All-Products-Button{/* All Product Button */
+    padding: 8px 15px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 70px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.All-Products-Button:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* Custom Furniture section */
+.Custom-Furniture{
+    background-color: #decbc0;
+    width: 100%;
+}
+
+.Custom-furniture-text{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #453227;
+    padding-top: 80px;
+    height: 80px;
+}
+.Custom-furniture-text h1{
+    font-size: 30px;
+    line-height: 30px;
+}
+.Custom-furniture-text p{
+    line-height: 30px;
+}
+
+
+.Mission-Vision-History-Container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #453227;
+    position: relative;
+    top: 70px;
+}
+
+.subContainers{
+    width: 27%;
+    background-color: #c5a491;
+    text-align: center;
+    padding: 40px 25px; 
+    border-radius: 5px;  
+}
+.subContainers span{
+    font-size: 40px;
+    background-color: #eaded7;
+    padding: 10px;
+    border-radius: 50px;
+}
+.subContainers h1{
+    margin: 10px 0px;
+    font-size: 25px;
+}
+.subContainers p{
+    line-height: 30px;
+}
+
+
+
+
+
+
+/* Join Our News Letter section */
+.Newsletter{
+    width: 85%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.newsText{
+    width: 50%;
+}
+.newsText h1{
+    font-size: 2rem;
+    line-height: 1;
+    color: black;
+    word-spacing: 3px;
+}
+.newsText p{
+    color: #617d98;
+    line-height: 2;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.Subscribe{
+    width: 45%;
+}
+.Subscribe form{
+    margin-top: 80px;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.Subscribe input{
+    width: 70%;
+    font-size: 15px;
+    padding: 8px 5px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.Subscribe Button{/* Subscribe Button */
+    padding: 8px 25px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: 0px;
+    border-left: 2px solid black;
+    background-color: #ab7a5f;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.Subscribe Button:hover{
+    color: white;
+    transition: all 0.3s ease-out;
+}

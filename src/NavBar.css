@@ -1,0 +1,113 @@
+*:focus{
+    padding: 0px;
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+.navBar{
+    position: fixed;
+    width: 100%;
+    background-color:white;
+    z-index: 20;
+}
+.content-Container{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto ;
+    margin-top: 10px;
+}
+
+
+
+
+.Title{
+    font-family: Playball;
+    font-size: 40px;
+    color: black;
+    text-shadow: 1px 2px 5px gray;
+}
+.Title span{
+    color:#ab7a5f ;
+}
+
+
+
+
+
+
+.navButtons{
+    margin-top: 23px;
+}
+
+.navButtons a{
+    margin:20px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+.navButtons a:hover{
+    border-bottom: 2px solid #ab7a5f ;
+}
+
+
+
+
+
+.Cart-and-Login{
+    display: flex;
+    margin-top: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Cart-and-Login a{
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.Cart-and-Login h2{
+    font-weight: lighter;
+    
+}
+
+.cartContainer{
+    display: flex;
+    width: 30%;
+}
+
+
+.cartContainer span{
+    transform: scale(1.2);
+    margin-left: 5px;
+}
+.cart-figure p{
+    background-color: #ab7a5f;
+    padding: 4px 7px;
+    position: relative;
+    bottom: 12px;
+    right: 10px;
+    border-radius: 50px; 
+    color: white;
+}
+
+
+
+
+
+
+
+.loginContainer{
+    display: flex;
+    margin-left: 10px;
+}
+
+.loginContainer span{
+    transform: scaleY(1.2);
+    margin-left: 5px;
+}
