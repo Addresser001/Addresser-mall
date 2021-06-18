@@ -29,7 +29,9 @@
     justify-content: space-between;
 }
 
-
+.OurStory-image{
+    width: 48%;
+}
 
 .OurStory-text{
     width: 46%;

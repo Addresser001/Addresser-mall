@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const{items, Loading} = useFetch("http://localhost:8000/items/"+id);
 
     
-
+    
    
     const addToCart=(product)=>{
 
@@ -24,24 +24,18 @@ const ProductDetails = () => {
         }else{
             products = JSON.parse(localStorage.getItem('products'));
         }
-        products.push(product);
-        localStorage.setItem("products", JSON.stringify(products));
-        // fetch("http://localhost:8000/cart", {
-        //     method:"POST",
-        //     headers:{"Content-Type": "application/json"},
-        //     body:JSON.stringify(items)
-        // }).then(()=>{
-        //     console.log("product Added!")
-        // })
 
-        
+        if (!(products.filter(e => e.id === product.id).length > 0)) {
+            products.push(product);
+            localStorage.setItem("products", JSON.stringify(products));
+        }
     }
 
-    const{toggleLength}=useContext(LengthContext)
+    const{toggleLength}=useContext(LengthContext);
 
 
     
-    return ( 
+    return( 
             <div className="Details-wrapper">
             {Loading && <div><h1>Loading</h1></div>}
             {items && ( 

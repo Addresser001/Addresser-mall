@@ -242,7 +242,7 @@ body{
     width: 50%;
 }
 .newsText h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1;
     color: black;
     word-spacing: 3px;
@@ -262,9 +262,10 @@ body{
     text-align: right;
     border: 2px solid black;
     border-radius: 5px;
+    padding: 0px;
 }
 .Subscribe input{
-    width: 70%;
+    width: 68%;
     font-size: 15px;
     padding: 8px 5px;
     border: 0px;
@@ -280,6 +281,7 @@ body{
     background-color: #ab7a5f;
     transition: all 0.3s ease-in;
     cursor: pointer;
+    margin: 0;
 }
 
 .Subscribe Button:hover{

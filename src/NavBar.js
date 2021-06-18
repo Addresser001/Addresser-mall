@@ -20,18 +20,18 @@ const NavBar = () => {
     const {theLength}=useContext(LengthContext)
 
     const[productLength, setProductLength]= useState(null)
+    const[storedProducts, setStoredProducts] = useState([])
     
-    let products;
-    if(localStorage.getItem('products')== null){
-        products = [];
-    }else{
-    products = JSON.parse(localStorage.getItem('products'));
-    }
+    
+    useEffect(()=>{
+       let products = JSON.parse(localStorage.getItem('products'));
+         setStoredProducts(products)
+    },[]);
     useEffect(()=>{
        
-        setProductLength(products.length) 
-        console.log('Money')
-    },[theLength])
+        setProductLength(storedProducts.length) 
+    },[theLength]);
+
     return ( 
             
             <div className="navBar">
@@ -48,7 +48,7 @@ const NavBar = () => {
                     <section className="Cart-and-Login">
                         <Link to="/Cart"><div className="cartContainer">
                             <h2>Cart</h2>
-                            <span class="material-icons">shopping_cart</span><sup className="cart-figure">{products&&<p>{productLength}</p>}</sup>
+                            <span class="material-icons">shopping_cart</span><sup className="cart-figure">{storedProducts &&<p>{productLength}</p>}</sup>
                         </div></Link>
 
                         <Link to="/Cart"><div className="loginContainer">
