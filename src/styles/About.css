@@ -1,0 +1,175 @@
+.About-Container{
+    padding-top: 90px;
+}
+
+.sub-NavBar-Container{
+    width: 100%;
+    background-color: #eaded7;
+    padding: 40px 0px;
+}
+.sub-NavBar1{
+    width: 85%;
+    margin: auto;
+}
+
+.sub-NavBar1 h1{
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+
+
+
+.OurStory-container{
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.OurStory-image{
+    width: 48%;
+}
+
+.OurStory-text{
+    width: 46%;
+}
+
+.OurStory-text h1{
+    color: #102a42;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.OurStory-underLine{
+    width: 80px;
+    height: 4px;
+    background-color:#ab7a5f;
+    margin-top: 6px;
+}
+
+.OurStory-text p{
+    color: #617d98;
+    line-height: 2;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1023px){
+
+    .About-Container{
+        padding-top: 90px;
+    }
+    
+    .sub-NavBar-Container{
+        width: 100%;
+        background-color: #eaded7;
+        padding: 40px 0px;
+    }
+    .sub-NavBar1{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .sub-NavBar1 h1{
+        letter-spacing: 3px;
+        font-size: 30px;
+    }
+    
+    
+    
+    
+    .OurStory-container{
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: block;
+        justify-content: space-between;
+    }
+    
+    .OurStory-image{
+        width: 100%;
+    }
+    
+    .OurStory-text{
+        width: 100%;margin-top: 20px;
+    }
+    
+    .OurStory-text h1{
+        color: #102a42;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .OurStory-underLine{
+        width: 80px;
+        height: 4px;
+        background-color:#ab7a5f;
+        margin-top: 6px;
+    }
+    
+    .OurStory-text p{
+        color: #617d98;
+        line-height: 2;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:767px){
+
+    .About-Container{
+        padding-top: 50px;
+    }
+
+    .About-Container .sub-NavBar-Container{
+        width: 100%;
+        background-color: #eaded7;
+        padding: 20px 0px;
+    }
+
+    .sub-NavBar1 h1{
+        letter-spacing: 3px;
+        font-size: 25px;
+    }
+
+
+    .OurStory-container{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .OurStory-text h1{
+        color: #102a42;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .OurStory-text p{
+        color: #617d98;
+        line-height: 2;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+}

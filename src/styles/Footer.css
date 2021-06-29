@@ -1,0 +1,21 @@
+.Footer{
+    background-color:#222;
+    width:100%;
+    padding:30px 0px;
+    text-align:center;
+}
+
+.Footer h5{
+    color:white;
+    font-weight:lighter;
+    font-size:16px;
+    word-spacing:2px;
+    letter-spacing:1.5px;
+}
+
+
+@media (max-width:767px){
+    .Footer h5{
+        font-size:13px;
+    }
+}

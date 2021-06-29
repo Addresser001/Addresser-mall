@@ -1,16 +1,16 @@
 import{BrowserRouter as Router, Route, Switch}from 'react-router-dom'
-import About from './About page/About';
-import Cart from './Cart page/Cart';
-import LengthContextProvider from './Context/LengthContext';
-import Home from './Home page/Home';
-import NavBar from "./NavBar";
-import ProductDetails from './Product Details/ProductDetails';
-import Products from './Products page/Products';
+import About from './Pages/About';
+import Cart from './Pages/Cart';
+import Home from './Pages/Home';
+import NavBar from "./Components/NavBar";
+import ProductDetails from './Pages/ProductDetails';
+import Products from './Pages/Products';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <Router>
-      <LengthContextProvider>
+      
       <div className="App">
         <NavBar/>
       </div>
@@ -37,10 +37,8 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <div className="Footer" style={{backgroundColor:"#222", width:"100%", padding:"30px 0px", textAlign:"center"}}>
-        <h5 style={{color:"white", fontWeight:"lighter", fontSize:"16px", wordSpacing:"2px", letterSpacing:"1.5px"}}>© 2021 <span style={{color:"#ab7a5f"}}>AddresserMall</span> All rights reserved</h5>
-      </div>
-      </LengthContextProvider>
+      <Footer/>
+      
     </Router>
   );
 }

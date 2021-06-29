@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
-import './ProductDetails.css';
+import '../styles/ProductDetails.css';
 import { Link } from "react-router-dom";
-import useFetch from "../Products page/useFetch";
-import { useContext } from "react";
-import { LengthContext } from "../Context/LengthContext";
+import useFetch from "../Components/Product-useFetch";
+import "../styles/Loading.css";
+
 
 
 
@@ -25,19 +25,19 @@ const ProductDetails = () => {
             products = JSON.parse(localStorage.getItem('products'));
         }
 
-        if (!(products.filter(e => e.id === product.id).length > 0)) {
+        // if (!(products.filter(e => e.id === product.id).length > 0)) {
             products.push(product);
             localStorage.setItem("products", JSON.stringify(products));
-        }
+        // }
     }
 
-    const{toggleLength}=useContext(LengthContext);
+
 
 
     
     return( 
             <div className="Details-wrapper">
-            {Loading && <div><h1>Loading</h1></div>}
+            {Loading && <div className="LoadingOverlay"><div className="loadingBox"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>}
             {items && ( 
                 <div>
                     <section className="sub-NavBar-Container">
@@ -80,7 +80,7 @@ const ProductDetails = () => {
                                     <span className="number">1</span>
                                     <i class="fa fa-plus minors-plus"></i>
                                 </div>
-                                <Link to="/Cart" onClick={()=>toggleLength()} ><button onClick={()=>addToCart(items)} className="addToCart">ADD TO CART</button></Link>
+                                <Link to="/Cart" ><button onClick={()=>addToCart(items)} className="addToCart">ADD TO CART</button></Link>
                             </div>
                             
                         </article>

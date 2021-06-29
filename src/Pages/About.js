@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import "./About.css";
+import "../styles/About.css";
 const About = () => {
     const pathname = window.location.pathname;
-    console.log(pathname);
     return ( 
         <div className="About-Container">
             <section className="sub-NavBar-Container">
-                <div className="sub-NavBar">
+                <div className="sub-NavBar1">
                     <h1><Link to="./" style={{color:"#795744", textDecoration:"none"}}>Home</Link> <span style={{color:"#453227"}}>{pathname}</span></h1>
                 </div>
             </section>

@@ -1,0 +1,887 @@
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+}
+*:focus{
+    outline: 0px;
+    border: 0px;
+}
+.homeContainer{
+    padding-top: 90px;
+}
+
+/* Design Your Comfort Zone section */
+.Design-section{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.Design-section img{
+    width: 100vw;
+    height: 84vh;
+}
+
+.Design-text{
+    margin-top: 100px;
+}
+.Design-text h1{
+    color: #102a42;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.Design-text p{
+    line-height: 2;
+    color: #4b749b;
+    font-size: 1.25rem;
+    margin: 30px 0px;
+}
+
+.Shop-now{/* Shop Now Button */
+    width: 140px;
+    height: 45px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    transition: all 0.3s ease-in;
+}
+
+.Shop-now:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* Featured Products section */
+.Featured-products{
+    width: 100%;
+    background: #f1f5f8;
+}
+
+.Featured-sub-container{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.Featured-text{
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+.Featured-text h2{
+    color: #102a42;
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+.underLine{
+    width: 100px;
+    height: 4px;
+    margin: auto;
+    background-color:#ab7a5f ;
+}
+
+.Featured-images-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.image-container{
+    width: 32%;
+}
+.image{
+    width: 100%;
+    height: 230px;
+}
+.search{/* the search symbol that appears when the image is hovered */
+    position: absolute;
+    background-color:rgba(0,0,0,0.5);
+    width: 27.2%;
+    height: 130px;
+    text-align: center;
+    padding-top: 100px;
+    opacity: 0; 
+    transition: all 0.3s ease-in;
+}
+.search:hover{
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.search span{
+    padding: 10px;
+    background-color: #ab7a5f;
+    font-size: 30px;
+    color: white;
+    border-radius: 50px;
+}
+
+.image-container p{
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.product-name{
+    text-align: left;
+}
+.product-price{
+    float: right;
+    color: #ab7a5f;
+}
+
+.All-Products-Button{/* All Product Button */
+    padding: 8px 15px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 70px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.All-Products-Button:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* Custom Furniture section */
+.Custom-Furniture{
+    background-color: #eaded7;
+    width: 100%;
+}
+
+.Custom-furniture-text{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #453227;
+    padding-top: 80px;
+    
+}
+.Custom-furniture-text h3{
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+.Custom-furniture-text p{
+    line-height: 30px;
+    font-size: .875rem;
+}
+
+
+.Mission-Vision-History-Container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #453227;
+    position: relative;
+    top: 70px;
+}
+
+.subContainers{
+    width: 27%;
+    background-color: #c5a491;
+    text-align: center;
+    padding: 40px 25px; 
+    border-radius: 5px;  
+}
+.subContainers span{
+    font-size: 2rem;
+    background-color: #eaded7;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    margin: 0px auto 1rem;
+    
+}
+.subContainers h1{
+    margin: 10px 0px;
+    font-size: 25px;
+}
+.subContainers p{
+    line-height: 30px;
+}
+
+
+
+
+
+
+/* Join Our News Letter section */
+.Newsletter{
+    width: 85%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.newsText{
+    width: 50%;
+}
+.newsText h3{
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #102a42;
+    word-spacing: 3px;
+}
+.newsText p{
+    color: #617d98;
+    line-height: 2;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.Subscribe{
+    width: 45%;
+}
+.Subscribe form{
+    margin-top: 80px;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px;
+}
+.Subscribe input{
+    width: 68%;
+    font-size: 15px;
+    padding: 8px 5px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.Subscribe Button{/* Subscribe Button */
+    padding: 8px 25px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: 0px;
+    border-left: 2px solid black;
+    background-color: #ab7a5f;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    margin: 0;
+}
+
+.Subscribe Button:hover{
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1023px){
+    .homeContainer{
+        padding-top: 90px;
+    }
+
+
+    /* Design Your Comfort Zone section */
+    .Design-section{
+        display: block;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .Design-section img{
+        display: none;
+    }
+
+    .Design-text{
+        margin-top: 50px;
+    }
+    .Design-text h1{
+        color: #102a42;
+        font-size: 2.5rem;
+        line-height: 51px;
+        letter-spacing: 0.1rem;
+        margin-bottom: .75rem;
+    }
+
+    .Design-text p{
+        line-height: 2;
+        color: #4b749b;
+        font-size: 1rem;
+        margin-top: 0px;
+        margin-bottom: 2rem;
+    }
+
+    .Shop-now{/* Shop Now Button */
+        width: 120px;
+        height: 35px;
+        border: 0px;
+        font-size: .870rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Featured Products section */
+    
+
+    .Featured-sub-container{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .Featured-text h2{
+        color: #102a42;
+        font-size: 2rem;
+        padding-bottom: 5px;
+        line-height: 1.25;
+    }
+    .underLine{
+        width: 100px;
+        height: 4px;
+        margin: auto;
+        background-color:#ab7a5f ;
+    }
+
+    .Featured-images-container{
+        width: 100%;
+        display: block;
+        margin-top: 60px;
+        
+    }
+    .image-container{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .image{
+        width: 100%;
+        height: 230px;
+    }
+    .search{/* the search symbol that appears when the image is hovered */
+        position: absolute;
+        background-color:transparent;
+        width: 72%;
+        height: 130px;
+        text-align: center;
+        padding-top: 100px;
+        opacity: 1; 
+        transition: all 0.3s ease-in;
+    }
+    .search:hover{
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .search span{
+        padding: 10px;
+        background-color: #ab7a5f;
+        font-size: 30px;
+        color: white;
+        border-radius: 50px;
+    }
+
+
+    .All-Products-Button{/* All Product Button */
+        margin: 30px 0px 80px 0px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Custom Furniture section */
+    .Custom-Furniture{
+        background-color: #decbc0;
+        width: 100%;
+        padding: 5rem 0px;
+    }
+
+    .Custom-furniture-text{
+        width: 90%;
+        margin: auto;
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        color: #453227;
+        padding-top: 0px;
+        
+    }
+    .Custom-furniture-text h3{
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-bottom: 2rem;
+    }
+    .Custom-furniture-text p{
+        line-height: 30px;
+    }
+
+
+    .Mission-Vision-History-Container{
+        width: 90%;
+        
+        margin: auto;
+        display: block;
+        justify-content: space-between;
+        color: #453227;
+        position: relative;
+        top: 0px;
+    }
+
+    .subContainers{
+        width: 100%;
+        margin-top: 4rem;
+        background-color: #c5a491;
+        text-align: center;
+        padding: 40px 0px; 
+        border-radius: 5px;  
+    }
+    .subContainers span{
+        font-size: 2rem;
+        background-color: #eaded7;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        place-items: center;
+        display: grid;
+        margin: 0px auto 1rem;
+    }
+    .subContainers h1{
+        margin: 10px 0px;
+        font-size: 25px;
+    }
+    .subContainers p{
+        line-height: 30px;
+    }
+
+
+
+
+
+
+    /* Join Our News Letter section */
+    .Newsletter{
+        display: none;
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: block;
+        padding: 5rem 0px;
+    }
+    .newsText{
+        width: 100%;
+    }
+    .newsText h3{
+        font-size: 1.5rem;
+        line-height: 1;
+        word-spacing: 3px;
+    }
+    .newsText p{
+        color: #617d98;
+        line-height: 2;
+        font-size: .875rem;
+        margin-top: 20px;
+        margin-bottom: 1.25rem;
+    }
+
+    .Subscribe{
+        width: 70%;
+    }
+    .Subscribe form{
+        margin-top: 0px;
+        text-align: right;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 0px;
+    }
+    .Subscribe input{
+        width: 68%;
+        font-size: 15px;
+        padding: 8px 5px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .Subscribe Button{/* Subscribe Button */
+        padding: 8px 25px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        border: 0px;
+        border-left: 2px solid black;
+        background-color: #ab7a5f;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .Subscribe Button:hover{
+        color: white;
+        transition: all 0.3s ease-out;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+
+
+    .homeContainer{
+        padding-top: 10px;
+    }
+
+
+    /* Design Your Comfort Zone section */
+    .Design-section{
+        display: block;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .Design-section img{
+        display: none;
+    }
+
+    .Design-text{
+        margin-top: 50px;
+    }
+    .Design-text h1{
+        color: #102a42;
+        font-size: 2.3rem;
+        line-height: 51px;
+        letter-spacing: 0.1rem;
+        margin-bottom: .75rem;
+    }
+
+
+    .Shop-now{/* Shop Now Button */
+        width: 120px;
+        height: 35px;
+        border: 0px;
+        font-size: .870rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Featured Products section */
+
+    .Featured-text{
+
+        padding-top: 70px;
+    }
+    
+
+    .Featured-sub-container{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .Featured-text h2{
+        color: #102a42;
+        font-size: 1.8rem;
+        padding-bottom: 5px;
+        line-height: 1.25;
+    }
+    
+
+    .Featured-images-container{
+        width: 100%;
+        display: block;
+        margin-top: 60px;
+        
+    }
+    .image-container{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .image{
+        width: 100%;
+        height: 230px;
+    }
+    .search{/* the search symbol that appears when the image is hovered */
+        position: absolute;
+        background-color:transparent;
+        width: 90%;
+        height: 130px;
+        text-align: center;
+        padding-top: 100px;
+        opacity: 1; 
+        transition: all 0.3s ease-in;
+    }
+    .search:hover{
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .search span{
+        padding: 10px;
+        background-color: #ab7a5f;
+        font-size: 30px;
+        color: white;
+        border-radius: 50px;
+    }
+
+
+    .All-Products-Button{/* All Product Button */
+        margin: 30px 0px 80px 0px;
+        font-size: .855rem;
+    }
+
+
+
+
+
+
+
+
+
+    /* Custom Furniture section */
+    .Custom-Furniture{
+        background-color: #decbc0;
+        width: 100%;
+        padding: 5rem 0px;
+    }
+
+    .Custom-furniture-text{
+        width: 90%;
+        margin: auto;
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        color: #453227;
+        padding-top: 0px;
+        
+    }
+    .Custom-furniture-text h3{
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-bottom: 2rem;
+    }
+    .Custom-furniture-text p{
+        line-height: 30px;
+    }
+
+
+    .Mission-Vision-History-Container{
+        width: 90%;
+        
+        margin: auto;
+        display: block;
+        justify-content: space-between;
+        color: #453227;
+        position: relative;
+        top: 0px;
+    }
+
+    .subContainers{
+        width: 100%;
+        margin-top: 4rem;
+        background-color: #c5a491;
+        text-align: center;
+        padding: 40px 0px; 
+        border-radius: 5px;  
+    }
+    .subContainers span{
+        font-size: 2rem;
+        background-color: #eaded7;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        place-items: center;
+        display: grid;
+        margin: 0px auto 1rem;
+    }
+    .subContainers h1{
+        margin: 10px 0px;
+        font-size: 25px;
+    }
+    .subContainers p{
+        line-height: 30px;
+        font-size: .875rem;
+        padding: 0px 10px;
+    }
+
+
+
+
+
+
+    /* Join Our News Letter section */
+    .Newsletter{
+        display: none;
+        width: 90%;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: block;
+        padding: 5rem 0px;
+    }
+    .newsText{
+        width: 100%;
+    }
+    .newsText h3{
+        font-size: 1.3rem;
+        line-height: 1;
+        word-spacing: 3px;
+    }
+    .newsText p{
+        color: #617d98;
+        line-height: 2;
+        font-size: .875rem;
+        margin-top: 20px;
+        margin-bottom: 1.25rem;
+    }
+
+    .Subscribe{
+        width: 100%;
+    }
+    .Subscribe form{
+        margin-top: 0px;
+        text-align: right;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 0px;
+    }
+    .Subscribe input{
+        width: 72%;
+        font-size: .615rem;
+        padding: 8px 0px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .Subscribe Button{/* Subscribe Button */
+        padding: 8px 5px;
+        font-size: .615rem;
+        letter-spacing: 2px;
+        border: 0px;
+        border-left: 2px solid black;
+        background-color: #ab7a5f;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .Subscribe Button:hover{
+        color: white;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@media (max-width:280px){
+
+    .Design-text h1{
+        color: #102a42;
+        font-size: 2rem;
+        line-height: 40px;
+        letter-spacing: 0.1rem;
+        margin-bottom: .75rem;
+    }
+
+    .Subscribe input{
+        width: 66%;
+        font-size: .615rem;
+        padding: 8px 0px;
+        border: 0px;
+        background-color: transparent;
+    }
+
+}

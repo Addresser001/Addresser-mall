@@ -1,0 +1,434 @@
+*:focus{
+    padding: 0px;
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+
+
+.mobile-Nav{
+    display: none;
+}
+.navBar{
+    position: fixed;
+    width: 100%;
+    background-color:white;
+    z-index: 20;
+    
+}
+.content-Container{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto ;
+    margin-top: 10px;
+}
+
+.NavBar-mobileShow{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto ;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.Title{
+    font-family: Playball;
+    font-size: 40px;
+    color: #102a42;
+    text-shadow: 1px 2px 5px gray;
+}
+.close-Mobile-Menu-Btn{
+    display: none;
+}
+.Title span{
+    color:#ab7a5f ;
+}
+
+
+
+
+
+
+.navButtons{
+    margin-top: 23px;
+}
+
+.navButtons a{
+    margin:20px;
+    padding: 5px;
+    text-decoration: none;
+    color: #102a42;
+    font-size:  .875rem;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+.navButtons a:hover{
+    border-bottom: 2px solid #ab7a5f ;
+}
+
+.navButtons a:focus{
+    border-bottom: 2px solid #ab7a5f ;
+}
+
+
+
+
+
+.Cart-and-Login{
+    display: flex;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Cart-and-Login a{
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color: #102a42;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    
+}
+.Cart-and-Login h2{
+    font-weight: 400;
+
+    
+    
+}
+
+.cartContainer{
+    display: flex;
+    width: 30%;
+}
+
+
+.cartContainer span{
+    transform: scale(1.1);
+    margin-left: 2px;
+}
+.cart-figure p{
+    background-color: #ab7a5f;
+    padding: 4px 7px;
+    position: relative;
+    bottom: 12px;
+    right: 10px;
+    border-radius: 50px; 
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+.loginContainer{
+    display: flex;
+    margin-left: 10px;
+}
+
+.loginContainer span{
+    transform: scaleY(1.2);
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+@media (max-width:900px){
+    .navBar{
+        overflow-x: hidden;
+        position: fixed;
+        width: 100%;
+        background-color:white;
+    }
+    .mobile-Nav{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto ;
+        margin-top: 10px; 
+    }
+    .mobile-menu-Icon{
+        font-size: 50px;
+        color: #ab7a5f;
+        font-weight: 800;
+    }
+    
+    .content-Container{
+        position: fixed;
+        display: block;
+        top: 0px;
+        left: 0px;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        margin: auto ;
+        margin-top: 0px;
+        transform: translate(-900px);
+        transition: all 0.2s ease-in;
+        z-index: 999;
+        padding-top: 10px;
+
+    }
+    
+    .NavBar-mobileShow{
+        position: fixed;
+        display: block;
+        top: 0px;
+        left: 0px;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        margin: auto ;
+        margin-top: 0px;
+        transform: translate(0px);
+        transition: all 0.5s ease-out;
+        z-index: 999;
+        padding-top: 10px;
+    }
+
+    .Title-Container{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .close-Mobile-Menu-Btn{
+        display: block;
+        font-size: 50px;
+        color: #bb2525;
+        font-weight: bolder;
+        animation-name: exit;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes exit {
+        100%{transform: rotate(90deg);}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .navButtons{
+        
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        
+    }
+    
+    .navButtons a{
+        margin:25px 0px ;
+        display: block;
+        width: 0px;
+        font-size:  1rem;
+    }
+    
+    .navButtons a:hover{
+        border-bottom: 0px;
+    }
+    
+    .navButtons a:focus{
+        border-bottom: 0px solid transparent ;
+    }
+    
+    
+    
+    
+    
+    .Cart-and-Login{
+        margin-top: 20px;
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    .Cart-and-Login a{
+        padding: 5px;
+        color: #102a42;
+        font-size: 18px;
+        
+    }
+    .Cart-and-Login h2{
+        font-weight: 400;
+    
+        
+        
+    }
+    
+    .cartContainer{
+        display: flex;
+        width: 30%;
+    }
+    
+    
+    .cartContainer span{
+        transform: scale(1.3);
+        margin-left: 2px;
+    }
+    .cart-figure p{
+        background-color: #ab7a5f;
+        padding: 4px 7px;
+        position: relative;
+        bottom: 14px;
+        right: 8px;
+        border-radius: 50px; 
+        color: white;
+        font-size: 15px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    .loginContainer{
+        display: flex;
+        margin-left: 10px;
+    }
+    
+    .loginContainer span{
+        transform: scaleY(1.3);
+        margin-left: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:280px) and (max-width:767px){
+  
+    .mobile-menu-Icon{
+        font-size: 35px;
+        color: #ab7a5f;
+        font-weight: 800;
+    }
+    
+ 
+    
+
+
+    .Title{
+        font-family: Playball;
+        font-size: 27px;
+        text-shadow: 1px 2px 5px gray;
+    }
+    .close-Mobile-Menu-Btn{
+        display: block;
+        font-size: 35px;
+        color: #bb2525;
+        font-weight: bolder;
+        animation-name: exit;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes exit {
+        100%{transform: rotate(20deg);}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .navButtons{
+        
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        
+    }
+    
+    .navButtons a{
+        margin:25px 0px ;
+        display: block;
+        width: 0px;
+        font-size:  .879rem;
+    }
+    
+
+    
+    
+    
+    
+    
+
+    
+    .Cart-and-Login a{
+        padding: 5px;
+        color: #102a42;
+        font-size: 15px;
+        
+    }
+    
+
+    .cart-figure p{
+        padding: 2px 5px;
+        position: relative;
+        bottom: 13px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    .loginContainer{
+        display: flex;
+        margin-left: 10px;
+    }
+    
+    .loginContainer span{
+        transform: scaleY(1.3);
+        margin-left: 5px;
+    }
+}

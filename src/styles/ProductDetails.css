@@ -1,0 +1,463 @@
+
+.Details-wrapper{
+    padding-top: 90px;
+}
+
+
+.Details-wrapper .sub-NavBar-Container{
+    width: 100%;
+    background-color: #eaded7;
+    padding: 40px 0px;
+}
+.Details-wrapper .sub-NavBar{
+    width: 85%;
+    margin: auto;
+}
+
+.Details-wrapper .sub-NavBar h1{
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+
+.backToProductsButtonContainer{
+    width: 85%;
+    margin: auto;
+}
+
+.backToProductsButton{/* Back to Produts Btn */
+    padding: 10px 15px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 80px 0px 20px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.backToProductsButton:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+.DetailsTemplate{
+    
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+.DetailsTemplate img{
+    width: 45%;
+    height: 490px;
+    border-radius: 5px;
+}
+
+.imageDetails{
+    width: 49%;
+    padding: 0px;
+}
+
+
+
+.imageDetails h2{
+    color: #102a42;
+    font-size: 40px;
+    box-sizing: border-box;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+
+.StarsContainer i{
+    color: rgb(255, 185, 0);
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.StarsContainer span{
+    color: #324d67;
+    margin-left: 10px;
+}
+.imageDetails h3{
+    color: #ab7a5f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 10px 0px;
+    letter-spacing: 1.5px;
+}
+.imageDetails p{
+    color: #324d67;
+}
+
+
+
+.ImageDesc{
+    line-height: 2;
+}
+
+
+.subDescContainer{
+    color: #324d67;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subDesc{
+    font-weight: 700;
+}
+
+.subDescContainer p{
+    margin-top: 10px;
+}
+
+
+.Line{
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #9eb2c7;
+}
+
+.numberOfItems span{
+    color: #102a42;
+    font-weight: 700;
+    
+}
+.minors-plus{
+    margin-right: 30px;
+    font-size: 20px;
+    position: relative;
+    bottom: 5px;
+}
+
+.number{
+    margin-right: 30px;
+    font-size: 40px;
+}
+
+
+.addToCart{/* Add to Cart Button */
+    padding: 10px 15px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.addToCart:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1023px){
+
+
+
+
+    .Details-wrapper{
+        padding-top: 90px;
+    }
+    
+    .backToProductsButtonContainer{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .backToProductsButton{/* Back to Produts Btn */
+        padding: 10px 15px;
+        margin: 30px 0px 10px 0px;
+    }
+    
+    .backToProductsButton:hover{
+        background-color: #cfa893;
+        color: #613a25;
+        transition: all 0.3s ease-out;
+    }
+    
+    
+    .DetailsTemplate{
+        width: 90%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    
+    
+    .DetailsTemplate img{
+        width: 48%;
+        height: 490px;
+        border-radius: 5px;
+    }
+    
+    .imageDetails{
+        width: 50%;
+        padding: 0px;
+    }
+    
+    
+    
+    .imageDetails h2{
+        color: #102a42;
+        font-size: 25px;
+        box-sizing: border-box;
+        line-height: 1.25;
+        margin-bottom: 3px;
+    }
+    
+    
+    .StarsContainer i{
+        font-size: 18px;
+        margin-right: 3px;
+    }
+    
+    .StarsContainer span{
+        color: #324d67;
+        margin-left: 10px;
+    }
+    .imageDetails h3{
+        color: #ab7a5f;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.25;
+        margin: 10px 0px;
+        letter-spacing: 1.5px;
+    }
+    .imageDetails p{
+        color: #324d67;
+    }
+    
+    
+    
+    .ImageDesc{
+        line-height: 1.6;
+    }
+    
+    
+    .subDescContainer{
+        color: #324d67;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .subDesc{
+        font-weight: 700;
+    }
+    
+    .subDescContainer p{
+        margin-top: 10px;
+    }
+    
+    
+    .Line{
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 0.5px solid #9eb2c7;
+    }
+    
+    .numberOfItems span{
+        color: #102a42;
+        font-weight: 700;
+        
+    }
+    .minors-plus{
+        margin-right: 30px;
+        font-size: 20px;
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .number{
+        margin-right: 30px;
+        font-size: 30px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:767px){
+
+
+    .Details-wrapper{
+        padding-top: 50px;
+    }
+    
+    
+    .Details-wrapper .sub-NavBar-Container{
+        width: 100%;
+        background-color: #eaded7;
+        padding: 20px 0px;
+    }
+    .Details-wrapper .sub-NavBar{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .Details-wrapper .sub-NavBar h1{
+        letter-spacing: 3px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    
+    .backToProductsButtonContainer{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .backToProductsButton{/* Back to Produts Btn */
+        padding: 10px 15px;
+        font-size: 10px;
+        margin: 30px 0px 10px 0px;
+    }
+    
+    .backToProductsButton:hover{
+        background-color: #cfa893;
+        color: #613a25;
+        transition: all 0.3s ease-out;
+    }
+    
+    
+    .DetailsTemplate{
+        width: 90%;
+        margin: auto;
+        display: block;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    
+    
+    .DetailsTemplate img{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+    
+    .imageDetails{
+        width:100%;
+        padding: 0px;
+    }
+    
+    
+    
+    .imageDetails h2{
+        color: #102a42;
+        font-size: 20px;
+        box-sizing: border-box;
+        line-height: 1.25;
+        margin-bottom: 3px;
+    }
+    
+    
+    .StarsContainer i{
+        color: rgb(255, 185, 0);
+        font-size: 16px;
+        margin-right: 3px;
+    }
+    
+    .StarsContainer span{
+        margin-left:0px;
+        font-size: 15px;
+    }
+    .imageDetails h3{
+        font-size: 18px;
+        margin: 5px 0px;
+    }
+    .imageDetails p{
+        color: #324d67;
+    }
+    
+    
+    
+    .ImageDesc{
+        line-height: 1.5;
+    }
+    
+    
+    .subDescContainer{
+        width: 100%;
+    }
+    
+    .subDesc{
+        font-weight: 700;
+    }
+    
+    .subDescContainer p{
+        margin-top: 10px;
+    }
+    
+    
+    
+    .numberOfItems span{
+        color: #102a42;
+        font-weight: 700;
+        
+    }
+    .minors-plus{
+        margin-right: 30px;
+        font-size: 18px;
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .number{
+        margin-right: 30px;
+        font-size: 30px;
+    }
+    
+    
+    
+
+}
