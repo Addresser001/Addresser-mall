@@ -88,7 +88,7 @@ const Cart = () => {
                 
                 {
                     allProduct.map(product=>{
-                        const { image, name, price, id}=product;
+                        const { image, name, price, id, Qty}=product;
                         return(
                             
                             
@@ -99,7 +99,7 @@ const Cart = () => {
                                     <h4 className="productName"><span class="mobile-description">Name : </span>{name}</h4>
                                 </div>
                                 <h5 className="productPrice"><span class="mobile-description">Price : </span>${price}</h5>
-                                <p className="product-quantity"><span class="mobile-description">Quantity : </span>2</p>
+                                <p className="product-quantity"><span class="mobile-description">Quantity : </span>{ Qty }</p>
 
                                 <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${price}</h5>
 

@@ -3,6 +3,7 @@ import '../styles/ProductDetails.css';
 import { Link } from "react-router-dom";
 import useFetch from "../Components/Product-useFetch";
 import "../styles/Loading.css";
+import { useState } from "react";
 
 
 
@@ -15,7 +16,7 @@ const ProductDetails = () => {
 
     
     
-   
+   const qty =5;
     const addToCart=(product)=>{
 
         let products;
@@ -24,7 +25,7 @@ const ProductDetails = () => {
         }else{
             products = JSON.parse(localStorage.getItem('products'));
         }
-
+            
         // if (!(products.filter(e => e.id === product.id).length > 0)) {
             products.push(product);
             localStorage.setItem("products", JSON.stringify(products));
@@ -32,8 +33,17 @@ const ProductDetails = () => {
     }
 
 
+    const [ Qty, setQty] = useState( 1 )
+    const Plus = () =>{
+        setQty(Qty + 1)
+    }
 
+    const Minors = () =>{
+        setQty(Qty - 1)
+    }
+   
 
+    
     
     return( 
             <div className="Details-wrapper">
@@ -48,6 +58,7 @@ const ProductDetails = () => {
                     <div >
                         <div className="backToProductsButtonContainer"><Link to="/Products"><button  className="backToProductsButton">BACK TO PRODUCTS</button></Link></div>
                         <article className="DetailsTemplate">
+                            
                             <img src={items.image} alt={items.name}/>
                             <div className="imageDetails">
                                 <h2>{items.name}</h2>
@@ -76,9 +87,9 @@ const ProductDetails = () => {
                                 <div className="Line"></div>
 
                                 <div className="numberOfItems">
-                                    <i class="fa fa-minus minors-plus"></i>
-                                    <span className="number">1</span>
-                                    <i class="fa fa-plus minors-plus"></i>
+                                    <i class="fa fa-minus minors-plus" onClick={ ()=> Minors()}></i>
+                                    <span className="number"> { Qty } </span>
+                                    <i class="fa fa-plus minors-plus" onClick={ ()=> Plus()} ></i>
                                 </div>
                                 <Link to="/Cart" ><button onClick={()=>addToCart(items)} className="addToCart">ADD TO CART</button></Link>
                             </div>

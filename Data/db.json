@@ -9,7 +9,9 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
+      
     },
     {
       "id": 2,
@@ -20,7 +22,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "dining"
+      "Category": "dining",
+      "Qty": 1
     },
     {
       "id": 3,
@@ -31,7 +34,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "bedroom"
+      "Category": "bedroom",
+      "Qty": 1
     },
     {
       "id": 4,
@@ -42,7 +46,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
       
     },
     {
@@ -54,7 +59,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "bedroom"
+      "Category": "bedroom",
+      "Qty": 1
     },
     {
       "id": 6,
@@ -65,7 +71,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "bedroom"
+      "Category": "bedroom",
+      "Qty": 1
     },
     {
       "id": 7,
@@ -76,7 +83,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 8,
@@ -87,7 +95,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 9,
@@ -98,7 +107,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kids"
+      "Category": "kids",
+      "Qty": 1
     },
     {
       "id": 10,
@@ -109,7 +119,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 11,
@@ -120,7 +131,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 12,
@@ -131,7 +143,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "dining"
+      "Category": "dining",
+      "Qty": 1
     },
     {
       "id": 13,
@@ -142,7 +155,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 14,
@@ -153,7 +167,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 15,
@@ -164,7 +179,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 16,
@@ -175,7 +191,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 17,
@@ -186,7 +203,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 18,
@@ -197,7 +215,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kitchen"
+      "Category": "kitchen",
+      "Qty": 1
     },
     {
       "id": 19,
@@ -208,7 +227,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "bedroom"
+      "Category": "bedroom",
+      "Qty": 1
     },
     {
       "id": 20,
@@ -219,7 +239,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kitchen"
+      "Category": "kitchen",
+      "Qty": 1
     },
     {
       "id": 21,
@@ -230,7 +251,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 22,
@@ -241,7 +263,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "office"
+      "Category": "office",
+      "Qty": 1
     },
     {
       "id": 23,
@@ -252,7 +275,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "livingroom"
+      "Category": "livingroom",
+      "Qty": 1
     },
     {
       "id": 24,
@@ -263,7 +287,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kids"
+      "Category": "kids",
+      "Qty": 1
     },
     {
       "id": 25,
@@ -274,7 +299,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kids"
+      "Category": "kids",
+      "Qty": 1
     },
     {
       "id": 26,
@@ -285,7 +311,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kids"
+      "Category": "kids",
+      "Qty": 1
     },
     {
       "id": 27,
@@ -296,7 +323,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "dining"
+      "Category": "dining",
+      "Qty": 1
     },
     {
       "id": 28,
@@ -307,7 +335,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "dining"
+      "Category": "dining",
+      "Qty": 1
     },
     {
       "id": 29,
@@ -318,7 +347,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kitchen"
+      "Category": "kitchen",
+      "Qty": 1
     },
     {
       "id": 30,
@@ -329,7 +359,8 @@
       "Available": "In Stock",
       "SKU": "RecQ0fMd8T0Vk211E",
       "Brand": "Liddy",
-      "Category": "kitchen"
+      "Category": "kitchen",
+      "Qty": 1
     }
   ],
   "cart": [
