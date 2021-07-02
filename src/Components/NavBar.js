@@ -37,7 +37,7 @@ const NavBar = () => {
                     <section className="Cart-and-Login">
                         <Link onClick={handleToggle} to="/Cart"><div className="cartContainer">
                             <h2>Cart</h2>
-                            <span class="material-icons">shopping_cart</span><sup className="cart-figure"><p>{allProduct.length}</p></sup>
+    <span class="material-icons">shopping_cart</span><sup className="cart-figure">{allProduct &&<p>{allProduct.length}</p>}</sup>
                         </div></Link>
 
                         <Link onClick={handleToggle} to="/Cart"><div className="loginContainer">

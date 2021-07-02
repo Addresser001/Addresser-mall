@@ -1,9 +1,10 @@
 import { useParams } from "react-router";
 import '../styles/ProductDetails.css';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useFetch from "../Components/Product-useFetch";
 import "../styles/Loading.css";
 import { useState } from "react";
+
 
 
 
@@ -14,9 +15,18 @@ const ProductDetails = () => {
     const { id } = useParams();
     const{items, Loading} = useFetch("http://localhost:8000/items/"+id);
 
+    const { name, image, price, desc, Available, SKU, Brand, qty =1 } =items;
+
+    
+
+    
+
+    const history = useHistory();
+    
+
     
     
-   const qty =5;
+ 
     const addToCart=(product)=>{
 
         let products;
@@ -27,13 +37,22 @@ const ProductDetails = () => {
         }
             
         // if (!(products.filter(e => e.id === product.id).length > 0)) {
-            products.push(product);
-            localStorage.setItem("products", JSON.stringify(products));
+            if(Qty < 1){
+                alert("Invalid Quantity");
+                history.go(-1)
+            }else{
+                products.push(product);
+                localStorage.setItem("products", JSON.stringify(products));
+            }
+            
         // }
     }
 
+    
 
-    const [ Qty, setQty] = useState( 1 )
+
+    const [ Qty, setQty] = useState( qty );
+
     const Plus = () =>{
         setQty(Qty + 1)
     }
@@ -59,9 +78,9 @@ const ProductDetails = () => {
                         <div className="backToProductsButtonContainer"><Link to="/Products"><button  className="backToProductsButton">BACK TO PRODUCTS</button></Link></div>
                         <article className="DetailsTemplate">
                             
-                            <img src={items.image} alt={items.name}/>
+                            <img src={image} alt={name}/>
                             <div className="imageDetails">
-                                <h2>{items.name}</h2>
+                                <h2 >{name}</h2>
                                 <div className="StarsContainer">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -70,8 +89,8 @@ const ProductDetails = () => {
                                     <i class="fa fa-star-half-o"></i>
                                     <span>(11 customer reviews)</span>
                                 </div>
-                                <h3>${items.price}</h3>
-                                <p className="ImageDesc">{items.desc}</p>
+                                <h3>${price}</h3>
+                                <p className="ImageDesc">{desc}</p>
                                 <div className="subDescContainer">
                                     <div>
                                         <p className="subDesc">Available :</p> 
@@ -79,19 +98,19 @@ const ProductDetails = () => {
                                         <p className="subDesc">Brand :</p> 
                                     </div>
                                     <div>
-                                        <p className="subDesc-Value">{items.Available}</p>
-                                        <p className="subDesc-Value">{items.SKU}</p>
-                                        <p className="subDesc-Value">{items.Brand}</p>
+                                        <p className="subDesc-Value">{Available}</p>
+                                        <p className="subDesc-Value">{SKU}</p>
+                                        <p className="subDesc-Value">{Brand}</p>
                                     </div>
                                 </div>
                                 <div className="Line"></div>
 
                                 <div className="numberOfItems">
                                     <i class="fa fa-minus minors-plus" onClick={ ()=> Minors()}></i>
-                                    <span className="number"> { Qty } </span>
+                                    <span > <input onChange={ (e) => setQty(Number(e.target.value))}  className="number"  type="Number" value={ Qty } /> </span>
                                     <i class="fa fa-plus minors-plus" onClick={ ()=> Plus()} ></i>
                                 </div>
-                                <Link to="/Cart" ><button onClick={()=>addToCart(items)} className="addToCart">ADD TO CART</button></Link>
+                                <Link to="/Cart" ><button onClick={()=>addToCart(items)} className="addToCart" >ADD TO CART</button></Link>
                             </div>
                             
                         </article>

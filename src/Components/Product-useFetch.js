@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 const useFetch = (url) => {
-    const [items, setItems]=useState(null)
+    const [items, setItems]=useState(0)
     const[Loading, setLoading]=useState(true)
     useEffect(()=>{
         const abortCon = new AbortController();
