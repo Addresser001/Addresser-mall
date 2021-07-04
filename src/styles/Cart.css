@@ -138,11 +138,11 @@
     justify-content: space-between;
 }
 
-.continueShopping-and-ClearShoppingCart button{
-    padding: 0.25rem 0.5rem;
+.ClearShopping-Btn, .ContiueShopping-Btn{
     border: 0px;
-    color: #fff;
-    background-color: #222;
+    padding: 5px 0px;
+    width: 170px;
+    height: 25px;
     font-size: .750rem;
     letter-spacing: 0.1rem;
     font-weight: 400;
@@ -151,9 +151,23 @@
     cursor: pointer;
     transition: all 0.3s ease-in;
     text-decoration: none;
+    text-align: center;
+}
+.ContiueShopping-Btn{
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+}
+.ContiueShopping-Btn:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
 }
 
-.continueShopping-and-ClearShoppingCart button:hover{
+.ClearShopping-Btn{
+    color: #fff;
+    background-color: #222;
+}
+.ClearShopping-Btn:hover{
     color: red;
     background-color: rgb(59, 59, 59);
     transition: all 0.3s ease-in;
@@ -581,15 +595,36 @@
         justify-content: space-between;
     }
     
-    .continueShopping-and-ClearShoppingCart .Product-page-Links{
+    .ClearShopping-Btn, .ContiueShopping-Btn{
+        border: 0px;
+        padding: 5px 0px;
+        width: 170px;
+        height: 25px;
         font-size: .650rem;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+        border-radius: 5px;
+        border-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        text-decoration: none;
+        text-align: center;
     }
-    .continueShopping-and-ClearShoppingCart button{
-        padding: 0.25rem 0.5rem;
-        font-size: .650rem;;
+    .ContiueShopping-Btn{
+        color: rgb(236, 232, 232);
+        background-color: #ab7a5f;
+    }
+    .ContiueShopping-Btn:hover{
+        background-color: #cfa893;
+        color: #613a25;
+        transition: all 0.3s ease-out;
     }
     
-    .continueShopping-and-ClearShoppingCart button:hover{
+    .ClearShopping-Btn{
+        color: #fff;
+        background-color: #222;
+    }
+    .ClearShopping-Btn:hover{
         color: red;
         background-color: rgb(59, 59, 59);
         transition: all 0.3s ease-in;
@@ -712,15 +747,25 @@
         text-align: center;
     }
     
-    .continueShopping-and-ClearShoppingCart .Product-page-Links{
+    .ClearShopping-Btn, .ContiueShopping-Btn{
+        border: 0px;
+        padding: 5px 0px;
+        width: 150px;
+        height: 25px;
         font-size: .650rem;
     }
-    .continueShopping-and-ClearShoppingCart button{
-        padding: 0.50rem 0.5rem;
+    .ContiueShopping-Btn{
+        color: rgb(236, 232, 232);
+        background-color: #ab7a5f;
+    }
+    
+    
+    .ClearShopping-Btn{
+        color: #fff;
         background-color: #222;
-        font-size: .650rem;
         margin-top: 15px;
     }
+    
 
 
 

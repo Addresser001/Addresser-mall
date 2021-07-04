@@ -52,7 +52,7 @@ const Cart = () => {
 
     const [orderTotal, setOrderTotal ] = useState(0)
     useEffect(() =>{
-       setSubTotal( allProduct.reduce((total, currentValue) => total = total + currentValue.price, 0));
+       setSubTotal( allProduct.reduce((total, currentValue) => total = total + currentValue.itemSubtotal, 0));
     }, [ allProduct ]);
 
     useEffect(()=>{
@@ -88,7 +88,7 @@ const Cart = () => {
                 
                 {
                     allProduct.map(product=>{
-                        const { image, name, price, id, qty}=product;
+                        const { image, name, itemSubtotal, price, id, Qty}=product;
                         return(
                             
                             
@@ -99,9 +99,12 @@ const Cart = () => {
                                     <h4 className="productName"><span class="mobile-description">Name : </span>{name}</h4>
                                 </div>
                                 <h5 className="productPrice"><span class="mobile-description">Price : </span>${price}</h5>
-                                <p className="product-quantity"><span class="mobile-description">Quantity : </span>{ qty }</p>
+                                
+                                <div className="product-quantity">
+                                    <p ><span class="mobile-description">Quantity : </span>{ Qty }</p>
+                                </div>
 
-                                <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${price}</h5>
+                                <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${itemSubtotal.toFixed(2)}</h5>
 
                                 <p className="Trash-can" onClick={()=>removeCartProducts(id)}><span  class="material-icons delete-button">delete</span></p>
                             </section>
@@ -115,9 +118,9 @@ const Cart = () => {
 
 
             <div className="continueShopping-and-ClearShoppingCart">
-                <Link className="Product-page-Links" to="./Products">Continue Shopping</Link>
+                <Link  to="./Products"><button className="ContiueShopping-Btn">Continue Shopping</button></Link>
 
-                <button onClick={()=> clearCart() } >Clear Shopping Cart</button>
+                <button className="ClearShopping-Btn" onClick={()=> clearCart() } >Clear Shopping Cart</button>
             </div>
 
 
