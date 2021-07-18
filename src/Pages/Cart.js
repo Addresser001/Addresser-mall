@@ -52,7 +52,7 @@ const Cart = () => {
 
     const [orderTotal, setOrderTotal ] = useState(0)
     useEffect(() =>{
-       setSubTotal( allProduct.reduce((total, currentValue) => total = total + currentValue.itemSubtotal, 0));
+       setSubTotal( allProduct.reduce((total, currentValue) => total = total + currentValue.ItemSubtotal, 0));
     }, [ allProduct ]);
 
     useEffect(()=>{
@@ -61,7 +61,6 @@ const Cart = () => {
 
 
 
-    console.log(subTotal)
 
     
 
@@ -88,23 +87,23 @@ const Cart = () => {
                 
                 {
                     allProduct.map(product=>{
-                        const { image, name, itemSubtotal, price, id, Qty}=product;
+                        const { Image, Name, ItemSubtotal, Price, id, Qty}=product;
                         return(
                             
                             
                             
                             <section className="product-and-details" key={id}>
                                 <div className="image-and-name">
-                                    <img src={image} alt={name}/>
-                                    <h4 className="productName"><span class="mobile-description">Name : </span>{name}</h4>
+                                    <img src={Image} alt={Name}/>
+                                    <h4 className="productName"><span class="mobile-description">Name : </span>{Name}</h4>
                                 </div>
-                                <h5 className="productPrice"><span class="mobile-description">Price : </span>${price}</h5>
+                                <h5 className="productPrice"><span class="mobile-description">Price : </span>${Price}</h5>
                                 
                                 <div className="product-quantity">
                                     <p ><span class="mobile-description">Quantity : </span>{ Qty }</p>
                                 </div>
 
-                                <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${itemSubtotal.toFixed(2)}</h5>
+                                <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${ItemSubtotal.toFixed(2)}</h5>
 
                                 <p className="Trash-can" onClick={()=>removeCartProducts(id)}><span  class="material-icons delete-button">delete</span></p>
                             </section>

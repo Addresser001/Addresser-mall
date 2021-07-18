@@ -598,7 +598,7 @@
     .ClearShopping-Btn, .ContiueShopping-Btn{
         border: 0px;
         padding: 5px 0px;
-        width: 170px;
+        width: 160px;
         height: 25px;
         font-size: .650rem;
         letter-spacing: 0.1rem;
@@ -735,7 +735,7 @@
 
 
 
-@media(max-width:280px){
+@media(max-width:320px){
 
 
     .continueShopping-and-ClearShoppingCart{
@@ -750,7 +750,7 @@
     .ClearShopping-Btn, .ContiueShopping-Btn{
         border: 0px;
         padding: 5px 0px;
-        width: 150px;
+        width: 160px;
         height: 25px;
         font-size: .650rem;
     }

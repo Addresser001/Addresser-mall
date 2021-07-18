@@ -1,8 +1,19 @@
 import "../styles/Products.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-const ProductTemplate = ({items}) => {
-    const [Data, setData]= useState(items)
+
+import Items from "../Data/db.json";
+const ProductTemplate = () => {
+
+    const [ Loading, setLoading] = useState(true);
+    const [ hideContentWhileLoading, setHideContentWhileLoading] = useState(false);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+            setHideContentWhileLoading(true);
+        },1000)
+    }, [ ])
+    const [Data, setData]= useState(Items)
     const numberOfItems=Data.length;
 
     const[display, setDisplay]=useState(false);
@@ -30,37 +41,37 @@ const ProductTemplate = ({items}) => {
 
 
     const All = () => {
-        setData( items);
+        setData( Items);
         setDropDown(!dropDown);
     };
 
     const Office = () => {
-       setData( items.filter(item => item.Category == "office"));
+       setData( Items.filter(item => item.Category == "office"));
        setDropDown(!dropDown);
     };
 
     const LivingRoom = () => {
-        setData( items.filter(item => item.Category == "livingroom"));
+        setData( Items.filter(item => item.Category == "livingroom"));
         setDropDown(!dropDown);
     };
 
     const Kitchen = () => {
-        setData( items.filter(item => item.Category == "kitchen"));
+        setData( Items.filter(item => item.Category == "kitchen"));
         setDropDown(!dropDown);
     };
 
     const BedRoom = () => {
-        setData( items.filter(item => item.Category == "bedroom"));
+        setData( Items.filter(item => item.Category == "bedroom"));
         setDropDown(!dropDown);
     };
 
     const Dining = () => {
-        setData( items.filter(item => item.Category == "dining"));
+        setData( Items.filter(item => item.Category == "dining"));
         setDropDown(!dropDown);
     };
 
     const Kids = () => {
-        setData( items.filter(item => item.Category == "kids"));
+        setData( Items.filter(item => item.Category == "kids"));
         setDropDown(!dropDown);
     };
 
@@ -69,7 +80,7 @@ const ProductTemplate = ({items}) => {
 
     
     const sortBy = (e) =>{
-        setData( items.sort((a, b)=> a.e - b.e))
+        setData( Items.sort((a, b)=> a.e - b.e))
         console.log(e)
     }
     
@@ -77,7 +88,8 @@ const ProductTemplate = ({items}) => {
     
     return ( 
         <div>
-           
+            {Loading && <div className="LoadingOverlay"><div className="loadingBox"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>}
+           { hideContentWhileLoading &&
             <section className="displayTemplate">
                 <div className="product-select-section">
                     <div className="mobile-dropDown-icons-container">
@@ -171,6 +183,7 @@ const ProductTemplate = ({items}) => {
                     </div>
                 </div>
             </section>
+           }
         </div>
      );
 }

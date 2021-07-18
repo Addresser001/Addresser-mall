@@ -1,5 +1,4 @@
-{
-  "items": [
+[
     {
       "id": 1,
       "image": "../images/Product-1.jpg",
@@ -362,6 +361,4 @@
       "Category": "kitchen",
       "Qty": 1
     }
-  ]
-  
-}
+]
