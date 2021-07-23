@@ -30,12 +30,14 @@ const Cart = () => {
     const [ displayCart, setDisplayCart ] = useState(false);
 
     useEffect(()=>{
-        if(allProduct.length >= 1){
+        if(allProduct){
             setDisplayCart(true)
         }else{
             setDisplayCart(false)
         }
     },[ allProduct ]);
+
+    
 
 
     
@@ -52,7 +54,7 @@ const Cart = () => {
 
     const [orderTotal, setOrderTotal ] = useState(0)
     useEffect(() =>{
-       setSubTotal( allProduct.reduce((total, currentValue) => total = total + currentValue.ItemSubtotal, 0));
+       setSubTotal( allProduct?.reduce((total, currentValue) => total = total + currentValue.ItemSubtotal, 0));
     }, [ allProduct ]);
 
     useEffect(()=>{
@@ -85,7 +87,7 @@ const Cart = () => {
                                 
                 </section>
                 
-                {
+                {   allProduct &&
                     allProduct.map(product=>{
                         const { Image, Name, ItemSubtotal, Price, id, Qty}=product;
                         return(

@@ -3,7 +3,7 @@ import React, {createContext, useState} from "react";
 export const GeneralContext = createContext();
 
 const GeneralConstextProvider = props =>{
-    const [ allProduct, setAllProduct ] = useState([]);
+    const [ allProduct, setAllProduct ] = useState([ ]);
 
     return(
         <GeneralContext.Provider value={{allProduct, setAllProduct}}>

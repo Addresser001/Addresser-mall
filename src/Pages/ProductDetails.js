@@ -27,24 +27,24 @@ const ProductDetails = () => {
     
  
     const addToCart=(product)=>{
-
-        let products;
-        if(window.localStorage.getItem('products')== 0){
-            products = [];
-        }else{
-            products = JSON.parse(localStorage.getItem('products'));
-        }
-            
-        if (!(products.filter(e => e.id === product.id).length > 0)) {
-            if(Qty < 1){
-                alert("Invalid Quantity");
-                history.go(-1)
-            }else{
-                products.push(product);
-                window.localStorage.setItem("products", JSON.stringify(products));
+        let products = JSON.parse(localStorage.getItem('products'));
+        
+        
+        if(products){
+            if (!(products?.filter(e => e.id === product.id).length > 0)) {
+                if(Qty < 1){
+                    alert("Invalid Quantity");
+                    history.go(-1)
+                }else{
+                    products?.push(product);
+                    window.localStorage.setItem("products", JSON.stringify(products));
+                }
+                
             }
-            
         }
+        
+            
+        
     }
 
     const [ Name, setName] = useState(null);
