@@ -5,7 +5,32 @@ import "../styles/Cart.css";
 const Cart = () => {
 
     const { allProduct, setAllProduct} =useContext(GeneralContext);
+
     
+
+    
+
+    const plus = id =>{
+        
+        allProduct.forEach(product => {
+            if(product.id === id){
+                product.Qty = product.Qty + 1;
+                product.ItemSubtotal = product.Qty * product.Price;
+            }
+            setAllProduct([...allProduct]); 
+        }) 
+    }
+    const minus = id =>{
+        
+        allProduct.forEach(product => {
+            if(product.id === id){
+                product.Qty = product.Qty - 1;
+                product.ItemSubtotal = product.Qty * product.Price;               
+            }
+            setAllProduct([...allProduct]); 
+            setAllProduct(allProduct.filter(product =>product.Qty !== 0));
+        }) 
+    }
     
     
 
@@ -14,9 +39,9 @@ const Cart = () => {
     };
     
     useEffect(()=>{
-        let products =JSON.parse(localStorage.getItem("products"));
-        setAllProduct(products);
-    }, []);
+       
+        setAllProduct( JSON.parse(localStorage.getItem("products")));
+    },[ ]);
 
     useEffect(()=>{
         window.localStorage.setItem("products", JSON.stringify(allProduct));
@@ -30,7 +55,7 @@ const Cart = () => {
     const [ displayCart, setDisplayCart ] = useState(false);
 
     useEffect(()=>{
-        if(allProduct){
+        if(allProduct?.length >= 1){
             setDisplayCart(true)
         }else{
             setDisplayCart(false)
@@ -67,7 +92,7 @@ const Cart = () => {
     
 
     
-    return displayCart ? ( 
+    return displayCart?  ( 
         <div className="Wrapper">
             
             <section className="sub-NavBar-Container">
@@ -90,6 +115,7 @@ const Cart = () => {
                 {   allProduct &&
                     allProduct.map(product=>{
                         const { Image, Name, ItemSubtotal, Price, id, Qty}=product;
+        
                         return(
                             
                             
@@ -102,7 +128,9 @@ const Cart = () => {
                                 <h5 className="productPrice"><span class="mobile-description">Price : </span>${Price}</h5>
                                 
                                 <div className="product-quantity">
-                                    <p ><span class="mobile-description">Quantity : </span>{ Qty }</p>
+                                    
+                                    <p ><span class="mobile-description">Quantity : </span><i class="fa fa-minus minors-plus-Symbols" onClick={()=> minus(id)} ></i><span className="Quantity">{ Qty } </span><i class="fa fa-plus minors-plus-Symbols" onClick={()=> plus(id)}  ></i></p>
+                                   
                                 </div>
 
                                 <h5 className="sub-total"><span class="mobile-description">Subtotal : </span>${ItemSubtotal.toFixed(2)}</h5>
@@ -143,7 +171,7 @@ const Cart = () => {
             </div>
             
         </div>  
-    ) :
+     ) :
 
     (
         <div className="your-cart-is-empty">

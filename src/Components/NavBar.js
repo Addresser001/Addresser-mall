@@ -4,11 +4,17 @@ import { GeneralContext } from "../Context/generalContext";
 import '../styles/NavBar.css';
 
 const NavBar = () => {
-    const { allProduct }= useContext(GeneralContext)
+    const { allProduct, setAllProduct }= useContext(GeneralContext);
+    useEffect(()=>{
+        window.localStorage.setItem("products", JSON.stringify(allProduct));
+    }, [ allProduct ]);
 
     const [isActive, setActive] = useState(false);
     const handleToggle = () => {
         setActive(!isActive);
+        if(localStorage.getItem('products')=== null){
+            window.localStorage.setItem("products", JSON.stringify([ ]));
+        }
     };
 
     return ( 
@@ -37,7 +43,7 @@ const NavBar = () => {
                     <section className="Cart-and-Login">
                         <Link onClick={handleToggle} to="/Cart"><div className="cartContainer">
                             <h2>Cart</h2>
-    <span class="material-icons">shopping_cart</span><sup className="cart-figure">{allProduct &&<p>{allProduct.length}</p>}</sup>
+                            <span class="material-icons">shopping_cart</span><sup className="cart-figure"><p>{allProduct.length}</p></sup>
                         </div></Link>
 
                         <Link onClick={handleToggle} to="/Cart"><div className="loginContainer">

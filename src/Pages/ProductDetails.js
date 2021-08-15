@@ -2,7 +2,8 @@ import { useParams } from "react-router";
 import '../styles/ProductDetails.css';
 import { Link, useHistory } from "react-router-dom";
 import "../styles/Loading.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { GeneralContext } from "../Context/generalContext";
 import Items from "../Data/db.json";
 
 
@@ -13,38 +14,67 @@ import Items from "../Data/db.json";
 const ProductDetails = () => {
     const { id } = useParams();
     
-
-
- 
+    const { allProduct, setAllProduct} =useContext(GeneralContext);
 
     
 
-
-    const history = useHistory();
+    const [ Loading, setLoading] = useState(true);
+    const [ hideContentWhileLoading, setHideContentWhileLoading] = useState(false);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+            setHideContentWhileLoading(true);
+        },1000)
+    }, [ ])
+    
     
 
+
+    const [ProductAddedNotification, setProductAddedNotification ] =useState(false);
+
+    const [ InvalidQty, setInvalidQty] = useState( false );
+
     
     
- 
+    let products;
+    if(localStorage.getItem('products')=== null){
+        window.localStorage.setItem("products", JSON.stringify([ ]));
+    }else{
+        products = JSON.parse(localStorage.getItem('products'));
+        
+    }
     const addToCart=(product)=>{
-        let products = JSON.parse(localStorage.getItem('products'));
-        
-        
-        if(products){
-            if (!(products?.filter(e => e.id === product.id).length > 0)) {
-                if(Qty < 1){
-                    alert("Invalid Quantity");
-                    history.go(-1)
-                }else{
-                    products?.push(product);
-                    window.localStorage.setItem("products", JSON.stringify(products));
-                }
-                
-            }
-        }
-        
+
+        if(Qty < 1){
+            setInvalidQty(true);
             
+        }else{
+            setProductAddedNotification(true)
+           
         
+            products.forEach(e => {
+                if(e.id === product.id){
+                    if(Qty > 1){
+                        e.Qty = e.Qty + Qty;
+                    }else{
+                        e.Qty = e.Qty + 1;
+                    }
+                    
+                    e.ItemSubtotal = e.Qty * e.Price;
+                }
+                window.localStorage.setItem("products", JSON.stringify(products));
+                
+            });
+
+            if (!(products.filter(e => e.id === product.id).length > 0)) {
+
+               
+                products.push(product);
+                window.localStorage.setItem("products", JSON.stringify(products));
+                   
+            }
+        }  
+        setAllProduct( JSON.parse(localStorage.getItem("products")));
     }
 
     const [ Name, setName] = useState(null);
@@ -56,43 +86,46 @@ const ProductDetails = () => {
     const [ brand, setBrand] = useState(null);
     const [ ItemSubtotal, setItemSubtotal] = useState(null);
 
-    const [ Qty, setQty] = useState( 1 );
+    let [ Qty, setQty] = useState( 1 );
+
+    const settingInvalidQty =()=>{
+        setInvalidQty(false);
+        setQty(1)
+    }
     
     
     
-    const [ Loading, setLoading] = useState(true);
-    const [ hideContentWhileLoading, setHideContentWhileLoading] = useState(false);
     useEffect(()=>{
 
-        setTimeout( ()=>{
-            Items.forEach(item => {           
-                if(item.id == id){
-                    console.log(item.id)
-                    console.log(id)
-                    const { name, image, price, desc, Available, SKU, Brand} =item;
-                    setName( name);
-                    setImage(image);
-                    setPrice( price );
-                    setDesc( desc);
-                    setAvail( Available );
-                    setSku( SKU );
-                    setBrand( Brand)
-                    const itemSubtotal =price * Qty;
         
-                    setItemSubtotal( itemSubtotal)
-                    setLoading(false);
-                    setHideContentWhileLoading(true);
-                    
-                }
+        Items.forEach(item => {           
+            if(item.id == id){
+                const { name, image, price, desc, Available, SKU, Brand} =item;
+                setName( name);
+                setImage(image);
+                setPrice( price );
+                setDesc( desc);
+                setAvail( Available );
+                setSku( SKU );
+                setBrand( Brand)
+                let itemSubtotal = price * Qty;
+
+
                 
-            });
+                setItemSubtotal( itemSubtotal)
+                
+                
+            }
+            
+        });
+    
         
-        }, 1000)
         
-    }, [ ])
+    }, [Qty ])
     
    
     
+
 
     
     
@@ -101,6 +134,25 @@ const ProductDetails = () => {
         <div className="Details-wrapper">
             {Loading && <div className="LoadingOverlay"><div className="loadingBox"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>}
             
+            <div className={ProductAddedNotification ? "Notification-show" : "Notification-hide"}>
+                <div className={ProductAddedNotification ?"Notification-container" : " "}>
+                    <h2><span>&#128077;</span>Product added!</h2>
+                    <div>
+                        <Link to="/Products"><button>Continue shopping</button></Link>
+                        <Link to="/Cart" ><button>Go to cart</button></Link>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className={InvalidQty ? "InvalidQty-show" : "InvalidQty-hide"}>
+                <div className={InvalidQty ?"InvalidQty-container" : " "}>
+                    <h2><span>&#128078;</span>Invalid Quantity!</h2>
+                    <div>
+                        <button onClick={ ()=> settingInvalidQty() }>Ok</button>
+                    </div>
+                </div>
+            </div>
                 
             { hideContentWhileLoading &&
                 <div>
@@ -145,7 +197,7 @@ const ProductDetails = () => {
                                     <span > <input onChange={ (e) => setQty(Number(e.target.value))}  className="number"  type="Number" value={ Qty } /> </span>
                                     <i class="fa fa-plus minors-plus" onClick={ ()=> setQty(Qty + 1)} ></i>
                                 </div>
-                                <Link to="/Cart" ><button onClick={()=>addToCart({id, Name, Image, ItemSubtotal, Price, Desc, Avail, sku, brand, Qty })} className="addToCart" >ADD TO CART</button></Link>
+                            <button onClick={()=>addToCart({id, Name, Image, ItemSubtotal, Price, Desc, Avail, sku, brand, Qty })} className="addToCart" >ADD TO CART</button>
                             </div>
                             
                         </article>

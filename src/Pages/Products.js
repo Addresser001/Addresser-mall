@@ -14,7 +14,7 @@ const Products = () => {
     
     return ( 
         <div className="Product-Container">
-            <section className="sub-NavBar-Container">
+            <section className="sub-NavBar-Container" >
                 <div className="sub-NavBar">
                     <h1><Link to="./" style={{color:"#795744", textDecoration:"none"}}>Home</Link> <span style={{color:"#453227"}}>{pathname}</span></h1>
                 </div>

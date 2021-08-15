@@ -1,9 +1,11 @@
 import "../styles/Products.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 
 import Items from "../Data/db.json";
 const ProductTemplate = () => {
+    
 
     const [ Loading, setLoading] = useState(true);
     const [ hideContentWhileLoading, setHideContentWhileLoading] = useState(false);
@@ -13,8 +15,30 @@ const ProductTemplate = () => {
             setHideContentWhileLoading(true);
         },1000)
     }, [ ])
+
+
+
+    const [ searchBar, setSearchBar] = useState('');
+
     const [Data, setData]= useState(Items)
-    const numberOfItems=Data.length;
+    const numberOfItems = Data.length;
+
+    useEffect(()=>{
+        setData(
+            Items.filter(datum =>{
+                if(searchBar === " "){
+                    return datum
+                }else if( datum.name.toLowerCase().includes(searchBar.toLowerCase())){
+                    return datum   
+                }
+            })
+        )
+    }, [searchBar])
+ 
+
+    
+    
+    
 
     const[display, setDisplay]=useState(false);
     const displayList=()=>{
@@ -25,13 +49,22 @@ const ProductTemplate = () => {
     };
 
 
+    const sticky = useRef(null)
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
+      
         window.addEventListener("scroll", () => {
-          setScroll(window.scrollY >= 190)
+            if (sticky.current?.getBoundingClientRect().top <= 80) {
+                setScroll(true)
+            }else{
+                setScroll(false)
+            }  
         })
-    }, []);
+        
+    },[]);
 
+  
+ 
 
     const[dropDown, setDropDown]=useState(false);
     const DropDownContainer=()=>{
@@ -39,40 +72,52 @@ const ProductTemplate = () => {
     };
 
 
+    const search = useRef(null);
+    
 
     const All = () => {
         setData( Items);
         setDropDown(!dropDown);
+        search.current.value = " search"
+        
     };
+
 
     const Office = () => {
        setData( Items.filter(item => item.Category == "office"));
        setDropDown(!dropDown);
+       setSearchBar('');
     };
 
     const LivingRoom = () => {
         setData( Items.filter(item => item.Category == "livingroom"));
         setDropDown(!dropDown);
+        setSearchBar(' ');
+        
     };
 
     const Kitchen = () => {
         setData( Items.filter(item => item.Category == "kitchen"));
         setDropDown(!dropDown);
+        setSearchBar(' ');
     };
 
     const BedRoom = () => {
         setData( Items.filter(item => item.Category == "bedroom"));
         setDropDown(!dropDown);
+        setSearchBar(' ');
     };
 
     const Dining = () => {
         setData( Items.filter(item => item.Category == "dining"));
         setDropDown(!dropDown);
+        setSearchBar(' ');
     };
 
     const Kids = () => {
         setData( Items.filter(item => item.Category == "kids"));
         setDropDown(!dropDown);
+        setSearchBar(' ');
     };
 
 
@@ -86,10 +131,12 @@ const ProductTemplate = () => {
     
     
     
+    
     return ( 
         <div>
             {Loading && <div className="LoadingOverlay"><div className="loadingBox"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>}
            { hideContentWhileLoading &&
+           
             <section className="displayTemplate">
                 <div className="product-select-section">
                     <div className="mobile-dropDown-icons-container">
@@ -97,8 +144,8 @@ const ProductTemplate = () => {
                     </div>
 
                     <div className={dropDown? "dropDown-open": "dropDown-close"}>
-                        <div className={scroll? "product-select-Scroll-none":"product-select-Scroll"}>
-                            <form ><input class="search-Bar" type="text" placeholder="Search"/></form>
+                        <div className={scroll? "product-select-Scroll-none":"product-select-Scroll"} >
+                            <form ><input class="search-Bar" type="text" placeholder="Search" onChange={e =>setSearchBar( e.target.value) } ref={search}/></form>
                             <div className="category">
                                 <h4>Category</h4>
                                 <p><span onClick={ () => All()}>All</span></p>
@@ -144,7 +191,7 @@ const ProductTemplate = () => {
                         </div>
                     </div>
                 </div>
-                <div className="product-image-section">
+                <div className="product-image-section" ref={sticky}>
                     <div className="product-found-container">
                         <div>
                             <span onClick={displayGrid} id={display?" ":"grid-and-list-Icons-Focus"} class="material-icons">grid_view</span>
@@ -163,9 +210,9 @@ const ProductTemplate = () => {
                         </div>
                     </div>
                     <div className={display?"product-image-wrapper-List":"product-image-wrapper-Grid"}>
-                        {
-                            Data.map((datum)=>{
+                        {  Data.map((datum)=>{
                                 const {image, name, price, desc, Available, SKU, brand, id} = datum;
+                                
                                 return(
                                     <div className={display?"image-container-List":"image-container-Grid"} key={id}>
                                         <div className={display?"search-Display-none":"search-Grid"}><Link to={`/Data/${id}`}><span class="material-icons">search</span></Link></div>

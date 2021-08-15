@@ -42,9 +42,8 @@
 }
 .product-select-Scroll-none{
     position: fixed;
-    bottom: 70px;
+    top: 70px;
     margin-bottom: 20px;
-    
 }
 
 .search-Bar{

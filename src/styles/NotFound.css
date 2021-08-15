@@ -1,0 +1,109 @@
+.NotFound-wrapper{
+    width: 100%;
+    padding: 150px 0px;
+}
+
+.NotFound-container{
+    background-color: #613a25;
+    width: 30%;
+    padding: 20px 0px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.NotFound-container h2{
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px #ab7a5f;
+}
+
+.NotFound-container p{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.NotFound-container a{
+    padding: 5px 10px;
+    border: 0px;
+    color: rgb(236, 232, 232);
+    background-color: #ab7a5f;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    margin: 20px 10px;
+    text-shadow: 1px 1px 2px black;
+    text-decoration: none;
+}
+.NotFound-container a:hover{
+    background-color: #cfa893;
+    color: #613a25;
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1023px){
+
+    .NotFound-wrapper{
+        padding: 200px 0px;
+    }
+    
+    .NotFound-container{
+        width: 50%;
+        padding: 20px 0px;
+    }
+    
+    .NotFound-container h2{
+        font-size: 35px;
+    }
+    
+    .NotFound-container p{
+        font-size: 20px;
+    }
+    
+   
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:767px){
+
+    .NotFound-wrapper{
+        padding: 130px 0px;
+    }
+    
+    .NotFound-container{
+        width: 90%;
+        padding: 20px 0px;
+    }
+    
+    .NotFound-container h2{
+        font-size: 30px;
+    }
+    
+    .NotFound-container p{
+        font-size: 18px;
+    }
+    
+   
+}
